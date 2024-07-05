@@ -1,0 +1,35 @@
+import {IconBase} from '@components';
+import React from 'react';
+import {Path, Svg} from 'react-native-svg';
+
+export function LogoVerticalWhiteIcon({}: IconBase) {
+  return (
+    <Svg width="150" height="150" viewBox="0 0 150 150" fill="none">
+      <Path
+        d="M150 75C150 116.421 116.421 150 75 150C33.5786 150 0 116.421 0 75C0 33.5786 33.5786 0 75 0C116.421 0 150 33.5786 150 75Z"
+        fill="#68FEE4"
+        fillOpacity="0.7"
+      />
+      <Path d="M46 90H83V97H46V90Z" fill="#1A191B" />
+      <Path d="M46 79H124V86H46V79Z" fill="#1A191B" />
+      <Path d="M46 66H99V73H46V66Z" fill="#1A191B" />
+      <Path d="M46 54H109V61H46V54Z" fill="#1A191B" />
+      <Path
+        d="M33.4167 55L35.1324 53.9722L38.7297 59.9771L37.014 61.0049L33.4167 55Z"
+        fill="#1A191B"
+      />
+      <Path
+        d="M41.5858 56.2656L42.5349 58.0261L36.9337 61.0457L35.9846 59.2852L41.5858 56.2656Z"
+        fill="#1A191B"
+      />
+      <Path
+        d="M33 80.0278L34.7157 79L38.313 85.0049L36.5973 86.0327L33 80.0278Z"
+        fill="#1A191B"
+      />
+      <Path
+        d="M41.1691 81.2934L42.1182 83.0539L36.517 86.0735L35.568 84.313L41.1691 81.2934Z"
+        fill="#1A191B"
+      />
+    </Svg>
+  );
+}
