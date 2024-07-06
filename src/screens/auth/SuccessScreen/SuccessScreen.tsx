@@ -1,18 +1,25 @@
 import {Box, Button, Icon, Screen, Text} from '@components';
 import React from 'react';
+import {AuthScreenProps} from 'src/routes/navigationType';
 
-export function SuccessScreen() {
+export function SuccessScreen({
+  route,
+  navigation,
+}: AuthScreenProps<'SuccessScreen'>) {
+  function navigateToLogin() {
+    navigation.navigate('LoginScreen');
+  }
   return (
     <Screen scrollable>
       <Box mt="s60">
-        <Icon name="messageSquareRound" />
+        <Icon {...route.params.icon} />
         <Text variant="smallHeader" mt="s14">
-          Enviamos um e-mail com as instruções para recuperação de senha!
+          {route.params.title}
         </Text>
         <Text textAlign="left" mt="s14" variant="textMedium">
-          Vá até seu e-mail e siga as instruções para recuperar sua conta.{' '}
+          {route.params.description}
         </Text>
-        <Button mt="s60" title="Login" />
+        <Button mt="s60" title="Login" onPress={navigateToLogin} />
       </Box>
     </Screen>
   );
