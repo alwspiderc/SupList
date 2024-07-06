@@ -11,6 +11,13 @@ import {EyeOnIcon} from '../../assets/icons/EyeOnIcon';
 import {MessageSquareRoundIcon} from '../../assets/icons/messageSquareRoundIcon';
 import {CheckSquareRoundIcon} from '../../assets/icons/checkSquareRoundIcon';
 
+import {CategoryIcon} from '../../assets/icons/CategoryIcon';
+import {CategoryFillIcon} from '../../assets/icons/CategoryFillIcon';
+import {HomeIcon} from '../../assets/icons/HomeIcon';
+import {HomeFillIcon} from '../../assets/icons/HomeFillIcon';
+import {ProfileIcon} from '../../assets/icons/ProfileIcon';
+import {ProfileFillIcon} from '../../assets/icons/ProfileFillIcon';
+
 export interface IconBase {
   size?: number;
   color?: string;
@@ -50,6 +57,12 @@ const iconRegistry = {
   eyeOff: EyeOffIcon,
   messageSquareRound: MessageSquareRoundIcon,
   checkSquareRound: CheckSquareRoundIcon,
+  category: CategoryIcon,
+  categoryFill: CategoryFillIcon,
+  home: HomeIcon,
+  homeFill: HomeFillIcon,
+  profile: ProfileIcon,
+  profileFill: ProfileFillIcon,
 };
 
 type IconType = typeof iconRegistry;
