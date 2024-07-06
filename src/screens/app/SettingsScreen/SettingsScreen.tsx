@@ -1,0 +1,13 @@
+import {Screen, Text} from '@components';
+import {AppScreeProps} from '@routes';
+
+export function SettingsScreen({
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  navigation,
+}: AppScreeProps<'SettingsScreen'>) {
+  return (
+    <Screen>
+      <Text>Settings Screen</Text>
+    </Screen>
+  );
+}

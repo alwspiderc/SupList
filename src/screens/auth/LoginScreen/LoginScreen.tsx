@@ -11,6 +11,9 @@ import React from 'react';
 import {AuthScreenProps} from 'src/routes/navigationType';
 
 export function LoginScreen({navigation}: AuthScreenProps<'LoginScreen'>) {
+  function submitForm() {
+    // navigation.navigate('HomeScreen');
+  }
   function navigateToForgotPassword() {
     navigation.navigate('ForgotPasswordScreen');
   }
@@ -33,7 +36,7 @@ export function LoginScreen({navigation}: AuthScreenProps<'LoginScreen'>) {
         Esqueceu a senha?
       </Text>
 
-      <Button mt="s60" title="Entrar" />
+      <Button mt="s60" title="Entrar" onPress={submitForm} />
       <Button
         preset="outline"
         mt="s8"
