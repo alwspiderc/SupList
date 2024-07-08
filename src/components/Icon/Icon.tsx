@@ -4,13 +4,13 @@ import {Pressable} from 'react-native';
 import {useTheme} from '@shopify/restyle';
 import {Theme, ThemeColors} from '@theme';
 
+import {ArrowLeftIcon} from '../../assets/icons/ArrowLeftIcon';
 import {LogoVerticalWhiteIcon} from '../../assets/svgs/LogoVerticalWhiteIcon';
 import {LogoNameVerticalWhiteIcon} from '../../assets/svgs/LogoNameVerticalWhiteIcon';
 import {EyeOffIcon} from '../../assets/icons/EyeOffIcon';
 import {EyeOnIcon} from '../../assets/icons/EyeOnIcon';
 import {MessageSquareRoundIcon} from '../../assets/icons/messageSquareRoundIcon';
 import {CheckSquareRoundIcon} from '../../assets/icons/checkSquareRoundIcon';
-
 import {CategoryIcon} from '../../assets/icons/CategoryIcon';
 import {CategoryFillIcon} from '../../assets/icons/CategoryFillIcon';
 import {HomeIcon} from '../../assets/icons/HomeIcon';
@@ -51,6 +51,7 @@ export function Icon({
 }
 
 const iconRegistry = {
+  arrowLeft: ArrowLeftIcon,
   logoVerticalWhite: LogoVerticalWhiteIcon,
   logoNameVerticalWhite: LogoNameVerticalWhiteIcon,
   eyeOn: EyeOnIcon,

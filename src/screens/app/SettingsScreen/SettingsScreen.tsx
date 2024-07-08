@@ -6,7 +6,7 @@ export function SettingsScreen({
   navigation,
 }: AppScreeProps<'SettingsScreen'>) {
   return (
-    <Screen>
+    <Screen canGoBack>
       <Text>Settings Screen</Text>
     </Screen>
   );
