@@ -30,6 +30,7 @@ export const theme = createTheme({
   },
   borderRadii: {
     s16: 16,
+    s50: 50,
   },
   textVariants: {
     header: {
