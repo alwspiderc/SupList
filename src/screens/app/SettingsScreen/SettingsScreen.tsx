@@ -1,4 +1,4 @@
-import {Screen, Text} from '@components';
+import {Button, Screen, Text} from '@components';
 import {AppScreeProps} from '@routes';
 
 export function SettingsScreen({
@@ -8,6 +8,7 @@ export function SettingsScreen({
   return (
     <Screen canGoBack>
       <Text>Settings Screen</Text>
+      <Button title="Sair da conta" />
     </Screen>
   );
 }

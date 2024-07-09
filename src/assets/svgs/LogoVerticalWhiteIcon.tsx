@@ -2,9 +2,9 @@ import {IconBase} from '@components';
 import React from 'react';
 import {Path, Svg} from 'react-native-svg';
 
-export function LogoVerticalWhiteIcon({}: IconBase) {
+export function LogoVerticalWhiteIcon({size = 150}: IconBase) {
   return (
-    <Svg width="150" height="150" viewBox="0 0 150 150" fill="none">
+    <Svg width={size} height={size} viewBox="0 0 150 150" fill="none">
       <Path
         d="M150 75C150 116.421 116.421 150 75 150C33.5786 150 0 116.421 0 75C0 33.5786 33.5786 0 75 0C116.421 0 150 33.5786 150 75Z"
         fill="#68FEE4"

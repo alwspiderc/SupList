@@ -6,6 +6,8 @@ import {Theme, ThemeColors} from '@theme';
 
 import {AddIcon} from '../../assets/icons/AddIcon';
 import {ArrowLeftIcon} from '../../assets/icons/ArrowLeftIcon';
+import {BellIcon} from '../../assets/icons/BellIcon';
+import {BellOnIcon} from '../../assets/icons/BellOnIcon';
 import {LogoVerticalWhiteIcon} from '../../assets/svgs/LogoVerticalWhiteIcon';
 import {LogoNameVerticalWhiteIcon} from '../../assets/svgs/LogoNameVerticalWhiteIcon';
 import {EyeOffIcon} from '../../assets/icons/EyeOffIcon';
@@ -18,6 +20,7 @@ import {HomeIcon} from '../../assets/icons/HomeIcon';
 import {HomeFillIcon} from '../../assets/icons/HomeFillIcon';
 import {ProfileIcon} from '../../assets/icons/ProfileIcon';
 import {ProfileFillIcon} from '../../assets/icons/ProfileFillIcon';
+import {SearchIcon} from '../../assets/icons/SearchIcon';
 
 export interface IconBase {
   size?: number;
@@ -30,12 +33,7 @@ export interface IconProps {
   onPress?: () => void;
 }
 
-export function Icon({
-  name,
-  color = 'greenPrimaryLight',
-  size,
-  onPress,
-}: IconProps) {
+export function Icon({name, color = 'grayBlack', size, onPress}: IconProps) {
   const {colors} = useTheme<Theme>();
 
   const SVGIcon = iconRegistry[name];
@@ -47,13 +45,15 @@ export function Icon({
       </Pressable>
     );
   }
-  5;
+
   return <SVGIcon size={size} />;
 }
 
 const iconRegistry = {
   add: AddIcon,
   arrowLeft: ArrowLeftIcon,
+  bell: BellIcon,
+  bellOn: BellOnIcon,
   logoVerticalWhite: LogoVerticalWhiteIcon,
   logoNameVerticalWhite: LogoNameVerticalWhiteIcon,
   eyeOn: EyeOnIcon,
@@ -66,6 +66,7 @@ const iconRegistry = {
   homeFill: HomeFillIcon,
   profile: ProfileIcon,
   profileFill: ProfileFillIcon,
+  search: SearchIcon,
 };
 
 type IconType = typeof iconRegistry;

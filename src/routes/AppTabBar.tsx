@@ -13,7 +13,6 @@ import {mapScreenToProps} from './mapScreenToProps';
 import {AppTabBottomTabParamList} from './AppTabNavigator';
 import {useAppSafeArea} from '@hooks';
 import {$shadowProps} from '@theme';
-// import {$shadowProps} from '@theme';
 
 export function AppTabBar({state, descriptors, navigation}: BottomTabBarProps) {
   const {bottom} = useAppSafeArea();
