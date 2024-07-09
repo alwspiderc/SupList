@@ -4,6 +4,7 @@ import {Pressable} from 'react-native';
 import {useTheme} from '@shopify/restyle';
 import {Theme, ThemeColors} from '@theme';
 
+import {AddIcon} from '../../assets/icons/AddIcon';
 import {ArrowLeftIcon} from '../../assets/icons/ArrowLeftIcon';
 import {LogoVerticalWhiteIcon} from '../../assets/svgs/LogoVerticalWhiteIcon';
 import {LogoNameVerticalWhiteIcon} from '../../assets/svgs/LogoNameVerticalWhiteIcon';
@@ -51,6 +52,7 @@ export function Icon({
 }
 
 const iconRegistry = {
+  add: AddIcon,
   arrowLeft: ArrowLeftIcon,
   logoVerticalWhite: LogoVerticalWhiteIcon,
   logoNameVerticalWhite: LogoNameVerticalWhiteIcon,

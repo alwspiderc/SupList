@@ -2,6 +2,7 @@ export * from './ActivityIndicator/ActivityIndicator';
 export * from './Icon/Icon';
 export * from './Text/Text';
 export * from './Button/Button';
+export * from './FabButton/FabButton';
 export * from './Box/Box';
 export * from './Screen/Screen';
 export * from './TextInput/TextInput';
