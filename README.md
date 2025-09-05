@@ -1,79 +1,215 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# 📝 SupList - Todo List App
 
-# Getting Started
+Um aplicativo de lista de tarefas desenvolvido em React Native como projeto de estudos para demonstrar conhecimentos em desenvolvimento mobile moderno.
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+## 📱 Screenshots
 
-## Step 1: Start the Metro Server
+<div align="center">
+  <img src="./public/images/Splash screen.png" width="200" alt="Splash Screen" />
+  <img src="./public/images/boas vindas.png" width="200" alt="Boas Vindas" />
+  <img src="./public/images/Log in.png" width="200" alt="Login" />
+  <img src="./public/images/Home.png" width="200" alt="Home" />
+</div>
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+<div align="center">
+  <img src="./public/images/Category.png" width="200" alt="Categorias" />
+  <img src="./public/images/forget password.png" width="200" alt="Esqueci a Senha" />
+  <img src="./public/images/Confirm-email.png" width="200" alt="Confirmar Email" />
+</div>
 
-To start Metro, run the following command from the _root_ of your React Native project:
+## 🚀 Tecnologias Utilizadas
 
-```bash
-# using npm
-npm start
+- **React Native 0.74.3** - Framework para desenvolvimento mobile
+- **TypeScript** - Linguagem de programação com tipagem estática
+- **React Navigation** - Navegação entre telas
+  - Bottom Tabs Navigator
+  - Native Stack Navigator
+- **Shopify Restyle** - Sistema de design e estilização
+- **React Native SVG** - Ícones e componentes gráficos
+- **React Native Safe Area Context** - Área segura para dispositivos
 
-# OR using Yarn
-yarn start
+## 🏗️ Arquitetura do Projeto
+
+O projeto segue uma arquitetura bem organizada com separação de responsabilidades:
+
+```
+src/
+├── assets/
+│   ├── icons/          # Ícones SVG customizados
+│   └── svgs/           # Logos e gráficos SVG
+├── brand/              # Elementos de marca
+├── components/         # Componentes reutilizáveis
+│   ├── ActivityIndicator/
+│   ├── Box/            # Sistema de layout
+│   ├── Button/         # Botões estilizados
+│   ├── FabButton/      # Floating Action Button
+│   ├── Icon/           # Sistema de ícones
+│   ├── PasswordInput/  # Input de senha
+│   ├── Screen/         # Wrapper de tela
+│   ├── Text/           # Componente de texto
+│   └── TextInput/      # Input de texto
+├── hooks/              # Hooks customizados
+├── routes/             # Configuração de navegação
+├── screens/            # Telas da aplicação
+│   ├── app/           # Telas do app autenticado
+│   └── auth/          # Telas de autenticação
+└── theme/              # Sistema de design
 ```
 
-## Step 2: Start your Application
+## 🎨 Sistema de Design
 
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
+O projeto implementa um sistema de design robusto utilizando **Shopify Restyle**:
 
-### For Android
+### Cores
 
-```bash
-# using npm
-npm run android
-
-# OR using Yarn
-yarn android
+```typescript
+const palette = {
+  greenPrimary: '#18444B', // Verde principal
+  greenPrimaryLight: '#68FEE4', // Verde claro
+  redError: '#EA3838', // Vermelho de erro
+  redErrorLight: '#FEEFEE', // Vermelho claro
+  grayBlack: '#1A191B', // Preto acinzentado
+  gray1: '#EDECEF', // Cinza claro
+  gray2: '#E1E1E1', // Cinza médio
+  grayWhite: '#FEFDFF', // Branco
+};
 ```
 
-### For iOS
+### Espaçamentos
+
+```typescript
+spacing: {
+  s8: 8,
+  s14: 14,
+  s16: 16,
+  s20: 20,
+  s26: 26,
+  s40: 40,
+  s60: 60,
+}
+```
+
+### Variantes de Texto
+
+- `header` - Cabeçalhos principais
+- `smallHeader` - Cabeçalhos secundários
+- `textMedium` - Texto médio
+- `button` - Texto de botões
+
+## 🧩 Componentes Principais
+
+### Sistema de Ícones
+
+O app possui um sistema de ícones SVG customizados com suporte a:
+
+- Tamanhos dinâmicos
+- Cores do tema
+- Estados (normal/ativo)
+- Ações de toque
+
+### Componentes de Layout
+
+- **Box**: Sistema flexível de layout baseado no Restyle
+- **Screen**: Wrapper de tela com SafeArea e navegação
+- **TouchableOpacityBox**: Box com suporte a toque
+
+### Componentes de Input
+
+- **TextInput**: Input de texto estilizado
+- **PasswordInput**: Input de senha com toggle de visibilidade
+- **Button**: Botões com presets (primary, outline)
+- **FabButton**: Floating Action Button
+
+## 🔧 Como Executar
+
+### Pré-requisitos
+
+- Node.js >= 18
+- React Native CLI
+- Xcode (iOS)
+- Android Studio (Android)
+- CocoaPods (iOS)
+
+### Instalação
 
 ```bash
-# using npm
+# Clone o repositório
+git clone https://github.com/alwspiderc/SupList.git
+
+# Entre na pasta do projeto
+cd SupList
+
+# Instale as dependências
+npm install
+
+# iOS - Instale as dependências nativas
+cd ios && pod install && cd ..
+```
+
+```bash
+# iOS
 npm run ios
 
-# OR using Yarn
-yarn ios
+# Android
+npm run android
+
+# Metro Bundler
+npm start
 ```
 
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
+## 📋 Funcionalidades Implementadas
 
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
+- ✅ Splash Screen
+- ✅ Tela de Boas-vindas
+- ✅ Sistema de Autenticação (UI)
+- ✅ Login e Cadastro
+- ✅ Recuperação de Senha
+- ✅ Confirmação de Email
+- ✅ Navegação por Tabs
+- ✅ Tela Principal (Home)
+- ✅ Sistema de Categorias
+- ✅ Design System Completo
+- ✅ Componentes Reutilizáveis
+- ✅ Tema Customizado
 
-## Step 3: Modifying your App
+## 🎯 Conceitos Demonstrados
 
-Now that you have successfully run the app, let's modify it.
+Este projeto foi desenvolvido para demonstrar conhecimentos em:
 
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
+- **Arquitetura**: Organização de código escalável
+- **TypeScript**: Tipagem forte e interfaces
+- **Design System**: Sistema de design consistente
+- **Navegação**: React Navigation com múltiplos tipos
+- **Componentes**: Criação de componentes reutilizáveis
+- **Hooks**: Hooks customizados para lógica compartilhada
+- **SVG**: Implementação de ícones escaláveis
+- **Tema**: Sistema de temas com Shopify Restyle
+- **Responsividade**: SafeArea e adaptação a diferentes telas
 
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
+## 🛠️ Scripts Disponíveis
 
-## Congratulations! :tada:
+```json
+{
+  "android": "react-native run-android",
+  "ios": "react-native run-ios",
+  "lint": "eslint .",
+  "start": "react-native start",
+  "test": "jest"
+}
+```
 
-You've successfully run and modified your React Native App. :partying_face:
+## 📦 Principais Dependências
 
-### Now what?
+- **@react-navigation** - Navegação
+- **@shopify/restyle** - Sistema de design
+- **react-native-svg** - Componentes SVG
+- **react-native-safe-area-context** - Área segura
+- **react-native-screens** - Otimização de telas
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
+## 👨‍💻 Desenvolvedor
 
-# Troubleshooting
+Desenvolvido por **Ester** como projeto de estudos em React Native.
 
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
+---
 
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+_Este projeto faz parte do meu portfólio e demonstra habilidades em desenvolvimento mobile com React Native, TypeScript e boas práticas de arquitetura._
